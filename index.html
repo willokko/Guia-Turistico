@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Guia Turístico da Paraíba</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://kit.fontawesome.com/e37b455303.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container mt-5">
+    <h1 class="text-center mb-4">Guia Turístico da Paraíba</h1>
+    <div class="row mb-4" id="locaisList">
+    </div>
+    <!-- Card com formulário para criar/editar um local (aparece abaixo) -->
+    <div id="formContainer" class="card">
+      <div class="card-header">
+        Adicionar Novo Local
+      </div>
+      <div class="card-body">
+        <form id="localForm">
+          <div class="form-group">
+            <label for="titulo">Título</label>
+            <input type="text" class="form-control" id="titulo" required>
+          </div>
+          <div class="form-group">
+            <label for="descricao">Descrição</label>
+            <textarea class="form-control" id="descricao" rows="3" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="foto">Link da Foto</label>
+            <input type="url" class="form-control" id="foto" required>
+          </div>
+          <!-- Campo oculto para armazenar o id durante a edição -->
+          <input type="hidden" id="localId">
+          <button type="submit" class="btn btn-primary" id="submitButton">Adicionar Local</button>
+          <button type="button" class="btn btn-secondary" id="cancelEdit" style="display:none;">Cancelar Edição</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
